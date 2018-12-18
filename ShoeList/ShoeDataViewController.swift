@@ -29,6 +29,7 @@ class ShoeDataViewController: UIViewController {
             if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             if let theShoeList = selectedShoeList {
                 context.delete(theShoeList)
+                try? context.save()
                 navigationController?.popViewController(animated: true)
             }
 
