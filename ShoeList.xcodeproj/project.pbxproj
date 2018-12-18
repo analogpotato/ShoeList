@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0144B63021C5A68400C40590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0144B62F21C5A68400C40590 /* AppDelegate.swift */; };
-		0144B63221C5A68400C40590 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0144B63121C5A68400C40590 /* ViewController.swift */; };
 		0144B63521C5A68400C40590 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0144B63321C5A68400C40590 /* Main.storyboard */; };
 		0144B63721C5A68500C40590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0144B63621C5A68500C40590 /* Assets.xcassets */; };
 		0144B63A21C5A68500C40590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0144B63821C5A68500C40590 /* LaunchScreen.storyboard */; };
 		0144B64521C5A68500C40590 /* ShoeListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0144B64421C5A68500C40590 /* ShoeListTests.swift */; };
 		0144B65021C5A68500C40590 /* ShoeListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0144B64F21C5A68500C40590 /* ShoeListUITests.swift */; };
+		0144B65E21C5A84100C40590 /* ShoeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0144B65D21C5A84100C40590 /* ShoeListTableViewController.swift */; };
+		0144B66021C5A90700C40590 /* ShoeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0144B65F21C5A90700C40590 /* ShoeList.swift */; };
+		0144B66221C5B99D00C40590 /* AddShoeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0144B66121C5B99D00C40590 /* AddShoeViewController.swift */; };
+		0144B66421C5C06800C40590 /* ShoeDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0144B66321C5C06800C40590 /* ShoeDataViewController.swift */; };
+		01E6642F21C7258B00E2B535 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01E6642D21C7258B00E2B535 /* CoreData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		0144B62C21C5A68400C40590 /* ShoeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0144B62F21C5A68400C40590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0144B63121C5A68400C40590 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0144B63421C5A68400C40590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0144B63621C5A68500C40590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0144B63921C5A68500C40590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		0144B64B21C5A68500C40590 /* ShoeListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoeListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0144B64F21C5A68500C40590 /* ShoeListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeListUITests.swift; sourceTree = "<group>"; };
 		0144B65121C5A68500C40590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0144B65D21C5A84100C40590 /* ShoeListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeListTableViewController.swift; sourceTree = "<group>"; };
+		0144B65F21C5A90700C40590 /* ShoeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeList.swift; sourceTree = "<group>"; };
+		0144B66121C5B99D00C40590 /* AddShoeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShoeViewController.swift; sourceTree = "<group>"; };
+		0144B66321C5C06800C40590 /* ShoeDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDataViewController.swift; sourceTree = "<group>"; };
+		01E6642E21C7258B00E2B535 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				0144B62F21C5A68400C40590 /* AppDelegate.swift */,
-				0144B63121C5A68400C40590 /* ViewController.swift */,
+				0144B65D21C5A84100C40590 /* ShoeListTableViewController.swift */,
+				0144B66121C5B99D00C40590 /* AddShoeViewController.swift */,
+				0144B66321C5C06800C40590 /* ShoeDataViewController.swift */,
+				0144B65F21C5A90700C40590 /* ShoeList.swift */,
 				0144B63321C5A68400C40590 /* Main.storyboard */,
 				0144B63621C5A68500C40590 /* Assets.xcassets */,
 				0144B63821C5A68500C40590 /* LaunchScreen.storyboard */,
 				0144B63B21C5A68500C40590 /* Info.plist */,
+				01E6642D21C7258B00E2B535 /* CoreData.xcdatamodeld */,
 			);
 			path = ShoeList;
 			sourceTree = "<group>";
@@ -256,7 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0144B63221C5A68400C40590 /* ViewController.swift in Sources */,
+				0144B66021C5A90700C40590 /* ShoeList.swift in Sources */,
+				0144B66221C5B99D00C40590 /* AddShoeViewController.swift in Sources */,
+				01E6642F21C7258B00E2B535 /* CoreData.xcdatamodeld in Sources */,
+				0144B65E21C5A84100C40590 /* ShoeListTableViewController.swift in Sources */,
+				0144B66421C5C06800C40590 /* ShoeDataViewController.swift in Sources */,
 				0144B63021C5A68400C40590 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 482J99T69B;
 				INFOPLIST_FILE = ShoeList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 482J99T69B;
 				INFOPLIST_FILE = ShoeList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -586,6 +604,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		01E6642D21C7258B00E2B535 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				01E6642E21C7258B00E2B535 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 01E6642E21C7258B00E2B535 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0144B62421C5A68400C40590 /* Project object */;
 }
