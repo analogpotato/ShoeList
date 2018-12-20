@@ -12,7 +12,7 @@ class ShoeDataViewController: UIViewController {
 
     var shoeVC = ShoeListTableViewController()
     var selectedShoeList : ShoeListCoreData? = nil
-    
+    //Variables
     @IBOutlet weak var shoeNameLabel: UILabel!
     @IBOutlet weak var totalMilesLabel: UILabel!
     

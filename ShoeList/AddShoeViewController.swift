@@ -13,7 +13,6 @@ class AddShoeViewController: UIViewController {
     var shoeVC = ShoeListTableViewController()
 
     @IBOutlet weak var shoeNameTextField: UITextField!
-    @IBOutlet weak var startingMilesTextField: UITextField!
     @IBOutlet weak var totalMilesTextField: UITextField!
     @IBOutlet weak var favoriteSwitch: UISwitch!
     
