@@ -15,6 +15,7 @@ class ShoeDataViewController: UIViewController {
     //Variables
     @IBOutlet weak var shoeNameLabel: UILabel!
     @IBOutlet weak var totalMilesLabel: UILabel!
+    @IBOutlet weak var removeMilesLabel: UITextField!
     
     
     override func viewDidLoad() {
@@ -25,8 +26,42 @@ class ShoeDataViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    var addMiles: Double? {
+        guard let addMilesValue = removeMilesLabel.text else {
+            return nil
+        }
+        return Double (addMilesValue)
+    }
+    
+    var totalMiles: Double? {
+        guard let addMilesValue = totalMilesLabel.text else {
+            return nil
+        }
+        return Double (addMilesValue)
+    }
+    
+    
+    
+    @IBAction func addMilesButton(_ sender: Any) {
+        
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let addData = selectedShoeList
+            if let addMilesData = addData {
+                totalMilesLabel.text = addMilesData.totalMiles
+        }
+        try? context.save()
+    }
+        
+      if totalMilesLabel != nil {
+            let finalOutput = Double ((totalMiles)! - (addMiles)!)
+            totalMilesLabel.text = "\(finalOutput)"
+        }
+        
+    }
+        
     @IBAction func deleteShoeButton(_ sender: Any) {
-            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+        
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             if let theShoeList = selectedShoeList {
                 context.delete(theShoeList)
                 try? context.save()

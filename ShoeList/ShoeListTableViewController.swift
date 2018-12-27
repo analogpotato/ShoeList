@@ -39,7 +39,6 @@ class ShoeListTableViewController: UITableViewController {
         }
     }
     
-    
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,11 +51,11 @@ class ShoeListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "shoeListIdentifier", for: indexPath)
 
         
-        cell.contentView.backgroundColor = .clear
-        let whiteRoundedView = UIView (frame: CGRect(x: 10, y: 30, width: 300.0, height: 50.0)) //TODO: Adjust the GCRect and figure out the best way to classify it, what are x,y,width and height?
-        whiteRoundedView.backgroundColor = .blue
-        whiteRoundedView.layer.masksToBounds = false
-        whiteRoundedView.layer.cornerRadius = 3.0
+       // cell.contentView.backgroundColor = .clear
+        let whiteRoundedView = UIView (frame: CGRect(x: 10, y: 20, width: 394.0, height: 160.0)) //TODO: Adjust the GCRect and figure out the best way to classify it, what are x,y,width and height?
+        whiteRoundedView.backgroundColor = .lightGray
+        whiteRoundedView.layer.masksToBounds = true
+        whiteRoundedView.layer.cornerRadius = 25.0
         whiteRoundedView.layer.shadowOffset = CGSize(width: 0, height: 0)
         whiteRoundedView.layer.shadowOpacity = 0.5
         cell.contentView.addSubview(whiteRoundedView)
@@ -66,6 +65,7 @@ class ShoeListTableViewController: UITableViewController {
         let shoeList = ShoeListItems[indexPath.row]
         
         if let name = shoeList.name {
+            cell.textLabel?.backgroundColor = .clear
         if shoeList.favorite {
             cell.textLabel?.text = "⭐️ " + name
         } else {
@@ -78,7 +78,7 @@ class ShoeListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 180
     }
     
     

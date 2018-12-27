@@ -18,14 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="shoeListIdentifier" id="GSM-BZ-GHZ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="shoeListIdentifier" id="GSM-BZ-GHZ">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GSM-BZ-GHZ" id="qID-Ov-uac">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -83,13 +82,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Miles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyI-uV-YoJ">
-                                <rect key="frame" x="16" y="174.5" width="343" height="29"/>
+                                <rect key="frame" x="16" y="234" width="343" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWf-1P-H6a">
-                                <rect key="frame" x="117" y="251.5" width="141" height="41"/>
+                                <rect key="frame" x="117" y="311" width="141" height="41"/>
                                 <color key="backgroundColor" red="0.808358214530848" green="0.17849517434113751" blue="0.1330502021043827" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Delete">
@@ -103,22 +102,40 @@
                                     <action selector="deleteShoeButton:" destination="aFr-zx-Zce" eventType="touchUpInside" id="FaD-VJ-8MP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8f-ks-hGe">
+                                <rect key="frame" x="67" y="169" width="60" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addMilesButton:" destination="aFr-zx-Zce" eventType="touchUpInside" id="uXC-RK-GHj"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Miles" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f9L-en-7A2">
+                                <rect key="frame" x="175" y="169" width="128" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ukh-9b-w87" firstAttribute="trailing" secondItem="xyI-uV-YoJ" secondAttribute="trailing" constant="16" id="Bo4-eH-bzm"/>
+                            <constraint firstItem="f9L-en-7A2" firstAttribute="top" secondItem="puh-A2-iGy" secondAttribute="bottom" constant="32.5" id="ESA-us-746"/>
+                            <constraint firstItem="f9L-en-7A2" firstAttribute="leading" secondItem="k8f-ks-hGe" secondAttribute="trailing" constant="48" id="IVL-Ln-fXl"/>
                             <constraint firstItem="ukh-9b-w87" firstAttribute="trailing" secondItem="puh-A2-iGy" secondAttribute="trailing" constant="16" id="T15-un-1f7"/>
+                            <constraint firstItem="xyI-uV-YoJ" firstAttribute="top" secondItem="f9L-en-7A2" secondAttribute="bottom" constant="35" id="VqI-5P-f0F"/>
                             <constraint firstItem="GWf-1P-H6a" firstAttribute="leading" secondItem="ukh-9b-w87" secondAttribute="leading" constant="117" id="c4i-ys-MzQ"/>
                             <constraint firstItem="puh-A2-iGy" firstAttribute="top" secondItem="ukh-9b-w87" secondAttribute="top" constant="34" id="eLA-v3-7S6"/>
+                            <constraint firstItem="k8f-ks-hGe" firstAttribute="top" secondItem="puh-A2-iGy" secondAttribute="bottom" constant="32.5" id="eir-6q-08g"/>
                             <constraint firstItem="puh-A2-iGy" firstAttribute="leading" secondItem="ukh-9b-w87" secondAttribute="leading" constant="16" id="fN1-5b-Ntj"/>
                             <constraint firstItem="xyI-uV-YoJ" firstAttribute="leading" secondItem="ukh-9b-w87" secondAttribute="leading" constant="16" id="jCA-C6-Ala"/>
-                            <constraint firstItem="xyI-uV-YoJ" firstAttribute="top" secondItem="puh-A2-iGy" secondAttribute="bottom" constant="38" id="ojm-8x-RlG"/>
                             <constraint firstItem="ukh-9b-w87" firstAttribute="trailing" secondItem="GWf-1P-H6a" secondAttribute="trailing" constant="117" id="tRY-38-l6f"/>
                             <constraint firstItem="GWf-1P-H6a" firstAttribute="top" secondItem="xyI-uV-YoJ" secondAttribute="bottom" constant="48" id="zm6-KX-odB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ukh-9b-w87"/>
                     </view>
                     <connections>
+                        <outlet property="removeMilesLabel" destination="f9L-en-7A2" id="coh-I4-SbJ"/>
                         <outlet property="shoeNameLabel" destination="puh-A2-iGy" id="pOb-6b-Epl"/>
                         <outlet property="totalMilesLabel" destination="xyI-uV-YoJ" id="6kv-kd-Jlt"/>
                     </connections>
@@ -159,8 +176,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHH-5H-Z6H">
-                                <rect key="frame" x="152" y="294" width="71" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHH-5H-Z6H">
+                                <rect key="frame" x="152" y="351" width="71" height="48"/>
                                 <color key="backgroundColor" red="0.64282435178756714" green="0.9622235894203186" blue="0.53717368841171265" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="okr-Be-i58"/>
