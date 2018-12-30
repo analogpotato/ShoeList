@@ -26,36 +26,53 @@ class ShoeDataViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    var addMiles: Double? {
+  
+   var addMilesDouble: Double? {
         guard let addMilesValue = removeMilesLabel.text else {
             return nil
         }
         return Double (addMilesValue)
     }
     
-    var totalMiles: Double? {
+    var totalMilesDouble: Double? {
         guard let addMilesValue = totalMilesLabel.text else {
             return nil
         }
         return Double (addMilesValue)
     }
-    
+ 
     
     
     @IBAction func addMilesButton(_ sender: Any) {
         
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-            let addData = selectedShoeList
-            if let addMilesData = addData {
-                totalMilesLabel.text = addMilesData.totalMiles
-        }
+            let addMilesShoe = ShoeListCoreData(entity: ShoeListCoreData.entity(), insertInto: context)
+           
+            
+            
+            if let totalMilesText = totalMilesLabel {
+                if totalMilesLabel != nil {
+                    let totalMilesOutput = Double ((totalMilesDouble)! - (addMilesDouble)!)
+                    totalMilesText.text = "\(totalMilesOutput)"
+                }
+                
+                
+                addMilesShoe.addMiles = removeMilesLabel.text!
+                addMilesShoe.totalMiles = totalMilesText.text!
+                
+                
+                
+            }
+            
+            print (addMilesShoe)
+            
+            
         try? context.save()
     }
         
-      if totalMilesLabel != nil {
-            let finalOutput = Double ((totalMiles)! - (addMiles)!)
-            totalMilesLabel.text = "\(finalOutput)"
-        }
+      
+        //TODO: Figure out why this doesn't update the label
+        
         
     }
         

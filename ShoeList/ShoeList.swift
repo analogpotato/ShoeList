@@ -12,7 +12,7 @@ import Foundation
 class ShoeList {
     var name = ""
     var image = ""
-    var addMiles = ""
-    var totalMiles = ""
+    var addMiles:Double?
+    var totalMiles:Double?
     var favorite = false
 }

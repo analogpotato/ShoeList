@@ -102,16 +102,16 @@
                                     <action selector="deleteShoeButton:" destination="aFr-zx-Zce" eventType="touchUpInside" id="FaD-VJ-8MP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8f-ks-hGe">
-                                <rect key="frame" x="67" y="169" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8f-ks-hGe">
+                                <rect key="frame" x="67" y="169" width="58" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addMilesButton:" destination="aFr-zx-Zce" eventType="touchUpInside" id="uXC-RK-GHj"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Miles" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f9L-en-7A2">
-                                <rect key="frame" x="175" y="169" width="128" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Miles" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f9L-en-7A2">
+                                <rect key="frame" x="189" y="169" width="86" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -119,9 +119,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="k8f-ks-hGe" firstAttribute="leading" secondItem="ukh-9b-w87" secondAttribute="leading" constant="67" id="6cs-uw-g9x"/>
                             <constraint firstItem="ukh-9b-w87" firstAttribute="trailing" secondItem="xyI-uV-YoJ" secondAttribute="trailing" constant="16" id="Bo4-eH-bzm"/>
                             <constraint firstItem="f9L-en-7A2" firstAttribute="top" secondItem="puh-A2-iGy" secondAttribute="bottom" constant="32.5" id="ESA-us-746"/>
-                            <constraint firstItem="f9L-en-7A2" firstAttribute="leading" secondItem="k8f-ks-hGe" secondAttribute="trailing" constant="48" id="IVL-Ln-fXl"/>
+                            <constraint firstItem="f9L-en-7A2" firstAttribute="leading" secondItem="k8f-ks-hGe" secondAttribute="trailing" constant="64" id="IVL-Ln-fXl"/>
                             <constraint firstItem="ukh-9b-w87" firstAttribute="trailing" secondItem="puh-A2-iGy" secondAttribute="trailing" constant="16" id="T15-un-1f7"/>
                             <constraint firstItem="xyI-uV-YoJ" firstAttribute="top" secondItem="f9L-en-7A2" secondAttribute="bottom" constant="35" id="VqI-5P-f0F"/>
                             <constraint firstItem="GWf-1P-H6a" firstAttribute="leading" secondItem="ukh-9b-w87" secondAttribute="leading" constant="117" id="c4i-ys-MzQ"/>
