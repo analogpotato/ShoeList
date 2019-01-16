@@ -42,7 +42,7 @@ class ShoeDataViewController: UIViewController {
     }
  
     
-    
+    //This block of code is the problem, the label gets updated but when I back out of the view and go back in it doesn't save, and CoreData isn't being updated.
     @IBAction func addMilesButton(_ sender: Any) {
         
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
