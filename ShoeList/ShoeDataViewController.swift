@@ -16,6 +16,7 @@ class ShoeDataViewController: UIViewController {
     @IBOutlet weak var shoeNameLabel: UILabel!
     @IBOutlet weak var totalMilesLabel: UILabel!
     
+    var dumb = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
